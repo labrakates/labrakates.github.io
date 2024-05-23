@@ -1,0 +1,5 @@
+site_name: Labrakates
+theme:
+  name: material
+
+repo_url: https://github.com/labrakates/pipelines
