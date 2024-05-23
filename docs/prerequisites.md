@@ -1,8 +1,18 @@
-# Installation
+# Prerequisites
 
-## Prerequisites
+## InstructLab General Knowledge
 
-### Kubernetes or OpenShift cluster
+Labrakates assumes you have some general understanding of
+[InstructLab](https://instructlab.ai/). You should understand concepts
+like taxonomy repository, student model, teacher model, synthetic data
+generation, and so forth. If not, read over the [LAB
+paper](https://arxiv.org/abs/2403.01081) and at least the README.mds
+of the [InstructLab GitHub org](https://github.com/instructlab/),
+[InstructLab command-line
+repo](https://github.com/instructlab/instructlab), and the
+[InstructLab taxonomy repo](https://github.com/instructlab/taxonomy).
+
+## Kubernetes or OpenShift cluster
 
 First, you'll need a recentish Kubernetes or OpenShift
 cluster. Additionally, your cluster should have nodes with Nvidia GPUs
@@ -21,23 +31,31 @@ Also ensure you have either `kubectl` or `oc` binaries for interacting
 with your Kubernetes/OpenShift installed locally to follow along with
 the rest of this document.
 
-### Tekton or OpenShift Pipelines
+## Tekton or OpenShift Pipelines
 
 Labrakates requires either a Kubernetes cluster with [Tekton Pipelines
 installed](https://tekton.dev/docs/installation/) or an OpenShift
 cluster with [OpenShift Pipelines
 installed](https://docs.openshift.com/pipelines/1.14/install_config/installing-pipelines.html).
 
-### Persistent Volumes
+## Persistent Volumes
 
 You'll need the ability to create some persistent volumes in your
 cluster. How much space you'll need depends on a few factors, but
 ideally you'd have at least 500GB of storage available to allocate to
 persistent volumes.
 
-### S3-Compatible Object Storage
+## S3-Compatible Object Storage
 
 Generated synthetic data and training results get stored to
 S3-compatible object storage. The generated training data can be quite
 small, but the training results can easily run into the dozens,
 hundreds, or thousands of GBs depending on the size of models in use.
+
+
+## HuggingFace User Access Token
+
+If any of the student or teacher models you plan to use require
+authentication to download from HuggingFace, you'll need a
+[HuggingFace User Access
+Token](https://huggingface.co/docs/hub/security-tokens).

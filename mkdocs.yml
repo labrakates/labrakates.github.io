@@ -1,5 +1,15 @@
 site_name: Labrakates
-theme:
-  name: material
+site_author: Ben Browning
 
 repo_url: https://github.com/labrakates/pipelines
+
+theme:
+  name: material
+  features:
+    - navigation.sections
+
+nav:
+  - Overview: index.md
+  - Installation:
+    - Prerequisites: prerequisites.md
+    - Creating the pipelines: creating_pipelines.md
