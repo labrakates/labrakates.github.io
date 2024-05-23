@@ -1,4 +1,4 @@
-# Labrakates
+# Overview
 
 Labrakates is a project to run [InstructLab](https://instructlab.ai/)
 in [Kubernetes](https://kubernetes.io/) using [Tekton
@@ -10,7 +10,7 @@ The name is roughly inspired by the InstructLab labrador combined with
 the way some people pronounce the Kubernetes abbreviation "k8s" as
 "kates" / "keights".
 
-# Overview
+# Pipelines
 
 InstructLab has two distinct steps that are required for fine-tuning a
 large language model - synthetic data generation and training.
