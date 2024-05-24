@@ -13,3 +13,4 @@ nav:
   - Installation:
     - Prerequisites: prerequisites.md
     - Creating the pipelines: creating_pipelines.md
+    - Your first data generation: first_data_generation.md
