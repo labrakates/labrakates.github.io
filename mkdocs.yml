@@ -6,6 +6,7 @@ repo_url: https://github.com/labrakates/pipelines
 theme:
   name: material
   features:
+    - navigation.expand
     - navigation.sections
 
 nav:
@@ -13,4 +14,7 @@ nav:
   - Installation:
     - Prerequisites: prerequisites.md
     - Creating the pipelines: creating_pipelines.md
+  - Data Generation:
     - Your first data generation: first_data_generation.md
+  - Training:
+    - Your first model training: first_training.md
