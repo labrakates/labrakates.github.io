@@ -17,6 +17,14 @@ kubectl create -f \
   https://raw.githubusercontent.com/labrakates/pipelines/main/pipelineruns/generate/generate.yaml
 ```
 
+The contents of that yaml file are shown below, if you prefer to
+copy/paste it into a file locally and use `kubectl create` from that
+local file instead of the remote URL.
+
+``` { .yaml .copy title="ilab-generate-pipelinerun.yaml" }
+--8<-- "https://raw.githubusercontent.com/labrakates/pipelines/main/pipelineruns/generate/generate.yaml"
+```
+
 You can monitor the progress of your PipelineRun by watching the pod
 logs that get created, using the Tekton Dashboard or OpenShift
 Console, or by waiting until the PipelineRun object shows success with
@@ -34,3 +42,9 @@ OpenShift Console's PipelineRun details page should look like for a
 successful first generate pipeline run:
 
 ![OpenShift PipelineRun details](img/first_generate_pipeline_console.png)
+
+
+Next, we'll look at how to setup a persistent HuggingFace cache so
+that we don't always re-download the models from HuggingFace on each
+run and how to persist our generation results so that we can use them
+in a subsequent training pipeline.
