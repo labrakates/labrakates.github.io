@@ -9,7 +9,7 @@ you want to create.
 To install all the necessary Tekton Task and Pipeline objects into
 your current Kubernetes namespace:
 
-```
+``` { .shell .copy }
 kubectl apply -k https://github.com/labrakates/pipelines?ref=main
 ```
 
@@ -19,7 +19,7 @@ the above command.
 
 If all goes well, you should see output like below:
 
-```
+``` { .shell }
 $ kubectl apply -k https://github.com/labrakates/pipelines?ref=main
 pipeline.tekton.dev/ilab-generate created
 pipeline.tekton.dev/ilab-train created

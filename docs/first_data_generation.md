@@ -5,13 +5,14 @@ To test data generation, you can kick off the simplest possible data
 generation pipeline that points to a default taxonomy repository and
 doesn't persist the generated results anywhere with the command below:
 
-**Note**: This example PipelineRun is not meant for any real usage,
-and only intended to validate your cluster can run data generation
-tasks. If your cluster has any special requirements, such as admission
-controllers, you may not be able to run this example as-is without
-customizations.
+!!! note
 
-```
+    This example PipelineRun is not meant for any real usage, and only
+    intended to validate your cluster can run data generation tasks. If
+    your cluster has any special requirements, such as admission controllers,
+    you may not be able to run this example as-is without customizations.
+
+``` { .shell .copy }
 kubectl create -f \
   https://raw.githubusercontent.com/labrakates/pipelines/main/pipelineruns/generate/generate.yaml
 ```
@@ -21,7 +22,7 @@ logs that get created, using the Tekton Dashboard or OpenShift
 Console, or by waiting until the PipelineRun object shows success with
 kubectl, like below:
 
-```
+``` { .shell }
 $ kubectl get pipelinerun ilab-generate-pipelinerun
 NAME                        SUCCEEDED   REASON      STARTTIME   COMPLETIONTIME
 ilab-generate-pipelinerun   True        Completed   6m10s       84s
