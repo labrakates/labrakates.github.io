@@ -4,7 +4,7 @@
 To test model training, you can kick off the simplest possible
 training pipeline that points to a default set of generated results
 and doesn't persist the trained model anywhere with the command
-below::
+below:
 
 !!! note
 
