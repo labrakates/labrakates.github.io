@@ -13,18 +13,18 @@ below:
     your cluster has any special requirements, such as admission controllers,
     you may not be able to run this example as-is without customizations.
 
-``` { .shell .copy }
-kubectl create -f \
-  https://raw.githubusercontent.com/labrakates/pipelines/main/pipelineruns/train/train.yaml
+Download [train.yaml](pipelines/pipelineruns/train/train.yaml) or
+copy/paste it from the code block below into a file locally.
+
+``` { .yaml .copy title="train.yaml" }
+--8<-- "pipelines/pipelineruns/train/train.yaml"
 ```
 
-The contents of that yaml file are shown below, if you prefer to
-copy/paste it into a file locally and use `kubectl create` from that
-local file instead of the remote URL.
-
-``` { .yaml .copy title="ilab-train-pipelinerun.yaml" }
---8<-- "https://raw.githubusercontent.com/labrakates/pipelines/main/pipelineruns/train/train.yaml"
+Start your first data training pipeline with a command like:
+``` { .shell .copy}
+kubectl create -f train.yaml
 ```
+
 
 You can monitor the progress of your PipelineRun by watching the pod
 logs that get created, using the Tekton Dashboard or OpenShift

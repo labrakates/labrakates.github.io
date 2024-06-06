@@ -1,0 +1,3 @@
+[submodule "docs/pipelines"]
+	path = docs/pipelines
+	url = https://github.com/labrakates/pipelines
